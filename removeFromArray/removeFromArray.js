@@ -1,16 +1,6 @@
-const removeFromArray = function(array) {
-    let args = Array.from(arguments);
-    if(args.length > 1){
-        for (let j = 1 ; j< args.length; j++){
-            for( let i = 0; i < array.length; i++){
-                if(array[i] === args[j]){
-                    array.splice(i,1);
-                }
-            }
-        }       
-    }
-    
-    return array;
+const removeFromArray = function(...args) {
+    const array = args[0];
+    return array.filter(val => !args.includes(val));
 }
 
 removeFromArray([1, 2, 3, 4], 3);

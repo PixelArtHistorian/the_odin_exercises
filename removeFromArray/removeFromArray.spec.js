@@ -16,7 +16,7 @@ describe('removeFromArray', function() {
   it('can remove all values', function() {
     expect(removeFromArray([1, 2, 3, 4], 1, 2, 3, 4)).toEqual([]);
   });
-  xit('works with strings', function() {
+  it('works with strings', function() {
     expect(removeFromArray(["hey", 2, 3, "ho"], "hey", 3)).toEqual([2, "ho"]);
   });
 });
